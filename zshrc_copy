@@ -91,4 +91,5 @@ alias vi='vim'
 alias -s go=vi
 alias -s sh=vi
 alias src='saverc'
+alias e='exit'
 alias o='logout'
