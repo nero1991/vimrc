@@ -51,6 +51,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/tomasr/molokai.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/dkprice/vim-easygrep.git'
+Plugin 'git://github.com/airblade/vim-gitgutter.git'
 
 " settings here
 :set number
@@ -59,7 +60,7 @@ Plugin 'https://github.com/dkprice/vim-easygrep.git'
 :set expandtab
 :%retab!
 let mapleader = ","
-
+:nmap <Leader>s :shell <CR>
 
 "vim-go
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -84,8 +85,8 @@ set t_Co=256
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 "
-:map <F1> :NERDTree <CR>
-:map <F1><F1> :NERDTreeClose <CR>
+:map <Leader>t :NERDTree <CR>
+:map <Leader>tt :NERDTreeClose <CR>
 
 "UltiSnips
 let g:UltiSnipsExpandTrigger="<c-space>"
