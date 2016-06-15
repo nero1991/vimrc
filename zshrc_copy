@@ -56,6 +56,11 @@ plugins=(git ant mvn git-flow wd)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+ #GOLANG environment
+export GOROOT=/usr/local/src/go1.6.2/
+export GOPATH=$HOME/projects
+export PATH=$PATH:$GOROOT/bin
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment

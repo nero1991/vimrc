@@ -58,6 +58,8 @@ Plugin 'https://github.com/dkprice/vim-easygrep.git'
 :set ts=4
 :set expandtab
 :%retab!
+let mapleader = ","
+
 
 "vim-go
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -73,6 +75,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 let g:go_fmt_command = "goimports"
+let g:go_def_mode = 'godef'
 
 "airline
 set laststatus=2
