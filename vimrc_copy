@@ -62,6 +62,11 @@ Plugin 'git://github.com/airblade/vim-gitgutter.git'
 let mapleader = ","
 :nmap <Leader>s :shell <CR>
 :nmap <Leader>q :q! <CR>
+:imap <c-h> <left>
+:imap <c-l> <right>
+:imap <c-j> <down>
+:imap <c-k> <up>
+
 
 "vim-go
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
