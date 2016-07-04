@@ -56,8 +56,10 @@ Plugin 'git://github.com/airblade/vim-gitgutter.git'
 
 " settings here
 :set number
+:set mouse=a
 :colorscheme molokai
 :set ts=4
+:set shiftwidth=4
 :set expandtab
 :%retab!
 let mapleader = ","

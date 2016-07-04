@@ -57,9 +57,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
  #GOLANG environment
-export GOROOT=/usr/local/src/go1.6.2/
+export GOROOT=/usr/local/src/go/
+export GOBIN=/usr/local/src/go/bin
 export GOPATH=$HOME/projects
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOBIN
 
 source $ZSH/oh-my-zsh.sh
 
