@@ -57,7 +57,8 @@ Plugin 'https://github.com/altercation/vim-colors-solarized.git'
 
 " settings here
 :set number
-:set mouse=a
+":set mouse=a
+:syntax on
 :colorscheme molokai
 :set ts=4
 :set shiftwidth=4
