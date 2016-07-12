@@ -1,0 +1,6 @@
+ #!/bin/bash
+ cp ~/.vimrc /usr/local/src/vimrc/vimrc_copy
+ cp ~/.zshrc /usr/local/src/vimrc/zshrc_copy
+ cd /usr/local/src/vimrc
+ git commit . -m "save"
+ git push
