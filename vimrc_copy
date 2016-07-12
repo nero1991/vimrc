@@ -21,7 +21,6 @@ Plugin 'https://github.com/tomasr/molokai.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/dkprice/vim-easygrep.git'
 Plugin 'git://github.com/airblade/vim-gitgutter.git'
-Plugin 'https://github.com/altercation/vim-colors-solarized.git'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
