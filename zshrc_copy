@@ -94,3 +94,4 @@ alias -s sh=vi
 alias src='saverc'
 alias e='exit'
 alias o='logout'
+alias top='htop'
