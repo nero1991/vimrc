@@ -118,6 +118,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "let g:UltiSnipsEditSplit="vertical"
 
+"Grep
+:map <Leader>s :GrepRoot cwd<CR>
 
 "进行版权声明的设置
 ""添加或更新头
