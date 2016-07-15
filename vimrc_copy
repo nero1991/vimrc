@@ -41,6 +41,7 @@ filetype plugin indent on    " 必须
 " settings here
 :set number
 ":set mouse=a
+":set bs=2
 :syntax on
 :colorscheme molokai
 :set ts=4
