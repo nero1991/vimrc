@@ -17,7 +17,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'https://github.com/zhaocai/GoldenView.Vim.git'
 Plugin 'https://github.com/tomasr/molokai.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/dkprice/vim-easygrep.git'
@@ -41,15 +40,18 @@ filetype plugin indent on    " 必须
 " settings here
 :set number
 ":set mouse=a
-":set bs=2
 :syntax on
+":set bs=2
 :colorscheme molokai
+:set hlsearch
 :set ts=4
 :set shiftwidth=4
 :set cursorline
 :set expandtab
 :%retab!
 let mapleader = ","
+:nmap <Leader>m *<CR>
+:nmap <Leader>n :nohl<CR>
 :nmap <Leader>s :shell <CR>
 :nmap <Leader>q :q! <CR>
 :imap <c-h> <left>
@@ -91,7 +93,7 @@ nmap <Leader>tg :TagbarToggle<CR>
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>dd <Plug>(go-def)
+au FileType go nmap <Leader>ff <Plug>(go-def)
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -122,19 +124,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Grep
 :map <Leader>cc :GrepRoot cwd<CR>
-
-"GoldenView
-" 1. split to tiled windows
-nmap <silent> <C-L>  <Plug>GoldenViewSplit
-"
-" 2. quickly switch current window with the main pane
-" and toggle back
-nmap <silent> <F8>   <Plug>GoldenViewSwitchMain
-nmap <silent> <S-F8> <Plug>GoldenViewSwitchToggle
-
-" 3. jump to next and previous window
-nmap <silent> <C-N>  <Plug>GoldenViewNext
-nmap <silent> <C-P>  <Plug>GoldenViewPrevious
 
 "进行版权声明的设置
 ""添加或更新头
