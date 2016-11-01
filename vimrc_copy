@@ -59,6 +59,9 @@ let mapleader = ","
 :imap <c-j> <down>
 :imap <c-k> <up>
 
+"YCM
+:set completeopt=menu
+
 "tagbar
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
