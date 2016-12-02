@@ -99,3 +99,4 @@ alias top='htop'
 alias cat='ccat'
 alias xr='crystal xbuild -ir'
 alias xd='crystal xbuild -bd'
+alias subl="open -a Sublime\ Text"

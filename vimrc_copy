@@ -16,7 +16,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'majutsushi/tagbar'
-Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/tomasr/molokai.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
@@ -97,7 +96,6 @@ nmap <Leader>tg :TagbarToggle<CR>
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>ff <Plug>(go-def)
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
