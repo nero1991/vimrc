@@ -37,11 +37,13 @@ filetype plugin indent on    " 必须
 " 查阅 :h vundle 获取更多细节和wiki以及FAQ
 " 将你自己对非插件片段放在这行之后
 
+"macvim
+:set guioptions=mb
 " settings here
 :set number
 ":set mouse=a
 :syntax on
-":set bs=2
+:set bs=2
 :colorscheme molokai
 :set hlsearch
 :set ts=4
@@ -58,10 +60,7 @@ let mapleader = ","
 :imap <c-l> <right>
 :imap <c-j> <down>
 :imap <c-k> <up>
-
-"YCM
 :set completeopt=menu
-
 "tagbar
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
