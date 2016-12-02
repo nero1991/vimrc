@@ -16,6 +16,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'majutsushi/tagbar'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/tomasr/molokai.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
@@ -38,7 +39,7 @@ filetype plugin indent on    " 必须
 " 将你自己对非插件片段放在这行之后
 
 "macvim
-:set guioptions=mb
+:set guioptions=m
 " settings here
 :set number
 ":set mouse=a
@@ -54,6 +55,7 @@ filetype plugin indent on    " 必须
 let mapleader = ","
 :nmap <Leader>m *<CR>
 :nmap <Leader>n :nohl<CR>
+:nmap <Leader>f :Autoformat<CR>
 :nmap <Leader>s :shell <CR>
 :nmap <Leader>q :q! <CR>
 :imap <c-h> <left>
