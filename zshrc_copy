@@ -88,9 +88,23 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vi='vim'
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+#other alias
+if [ -f ".alias" ]; then
+    source .alias
+fi
+
+#for mac vim
+if [ `which mvim` != "" ]; then
+    alias vim='mvim'
+    alias vi='mvim'
+else
+    alias vi='vim'
+fi
+
 alias -s go=vi
 alias src='saverc'
 alias e='exit'
