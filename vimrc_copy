@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'luochen1990/rainbow'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'majutsushi/tagbar'
@@ -126,6 +127,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Grep
 :map <Leader>cc :GrepRoot cwd<CR>
+
+"Rainbow
+let g:rainbow_active = 1
 
 "进行版权声明的设置
 ""添加或更新头
