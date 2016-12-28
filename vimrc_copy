@@ -15,9 +15,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'luochen1990/rainbow'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-airline/vim-airline'
+Plugin 'Lokaltog/vim-powerline'
 Plugin 'majutsushi/tagbar'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/tomasr/molokai.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/dkprice/vim-easygrep.git'
@@ -109,13 +109,10 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let g:go_def_mode = 'godef'
 
-"airline
+"powerline
+"let g:Powerline_symbols = 'utf8'
 set laststatus=2
-set t_Co=256
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
-"
+
 :map <Leader>t :NERDTree <CR>
 :map <Leader>tt :NERDTreeClose <CR>
 
@@ -130,6 +127,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Rainbow
 let g:rainbow_active = 1
+
+"YCM
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','<Enter>']
 
 "进行版权声明的设置
 ""添加或更新头
