@@ -22,6 +22,7 @@ Plugin 'https://github.com/tomasr/molokai.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/dkprice/vim-easygrep.git'
 Plugin 'git://github.com/airblade/vim-gitgutter.git'
+Plugin 'https://github.com/uguu-org/vim-matrix-screensaver.git'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
@@ -108,6 +109,10 @@ let g:go_highlight_build_constraints = 1
 
 let g:go_fmt_command = "goimports"
 let g:go_def_mode = 'godef'
+
+
+"lock
+:map <Leader>ll :Matrix<CR>
 
 "powerline
 "let g:Powerline_symbols = 'utf8'
