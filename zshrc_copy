@@ -98,9 +98,8 @@ if [ -f ".alias" ]; then
 fi
 
 #for mac vim
-if [ `which mvim` != "mvim not found" ]; then
+if [ `which mvim` != "" ]; then
     alias vim='mvim'
-    alias vi='mvim'
 else
     alias vi='vim'
 fi
