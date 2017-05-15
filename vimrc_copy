@@ -17,9 +17,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
 Plugin 'Shougo/neocomplete'
 Plugin 'luochen1990/rainbow'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'Lokaltog/vim-powerline'
-"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/tomasr/molokai.git'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
@@ -44,6 +42,7 @@ filetype plugin indent on    " 必须
 
 "macvim
 :set guioptions=m
+:set guifont=Source_Code_Pro:h12
 " settings here
 :set number
 ":set mouse=a
