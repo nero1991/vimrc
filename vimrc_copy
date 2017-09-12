@@ -18,12 +18,13 @@ Plugin 'ervandew/supertab'
 Plugin 'Shougo/neocomplete'
 Plugin 'luochen1990/rainbow'
 Plugin 'Lokaltog/vim-powerline'
-Plugin 'https://github.com/tomasr/molokai.git'
-Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plugin 'https://github.com/scrooloose/nerdtree.git'
-Plugin 'git://github.com/airblade/vim-gitgutter.git'
-Plugin 'https://github.com/uguu-org/vim-matrix-screensaver.git'
-Plugin 'https://github.com/mileszs/ack.vim.git'
+Plugin 'tomasr/molokai'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'uguu-org/vim-matrix-screensaver'
+Plugin 'mileszs/ack.vim'
+Plugin 'jiangmiao/auto-pairs'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
@@ -144,23 +145,23 @@ let g:rainbow_active = 1
 "进行版权声明的设置
 ""添加或更新头
 function AddTitle()
-    call append(0,"/* **************************************************************")
-    call append(1,"* Author: nero  email:nero_stellar@icloud.com")
-    call append(2,"* Last modified: ".strftime("%Y-%m-%d %H:%M"))
-    call append(3,"* Filename: ".expand("%:t"))
-    call append(4,"* Description: ")
-    call append(5,"*")
-    call append(6," ************************************************************** */")
+    call append(0,"//")
+    call append(1,"// Author: nero  email:nero_stellar@icloud.com")
+    call append(2,"// Last modified: ".strftime("%Y-%m-%d %H:%M"))
+    call append(3,"// Filename: ".expand("%:t"))
+    call append(4,"// Description: ")
+    call append(5,"//")
+    call append(6,"//\\n")
     echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
 endfunction
 
 "更新最近修改时间和文件名
 function UpdateTitle()
     normal m'
-    execute '/* *Last modified:/s@:.*$@\=strftime(": %Y-%m-%d %H:%M")@'
+    execute '// Last modified:/s@:.*$@\=strftime(": %Y-%m-%d %H:%M")@'
     normal ''
     normal mk
-    execute '/* *Filename:/s@:.*$@\=": ".expand("%:t")@'
+    execute '// Filename:/s@:.*$@\=": ".expand("%:t")@'
     execute "noh"
     normal 'k
     echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
@@ -174,7 +175,7 @@ function TitleDet()
     "默认为添加
     while n < 10
         let line = getline(n)
-        if line =~ '^\*\s*\S*Last\smodified:\S*.*$'
+        if line =~ '^\s*\S*Last\smodified:\S*.*$'
             call UpdateTitle()
             return
         endif
