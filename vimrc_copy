@@ -24,7 +24,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'uguu-org/vim-matrix-screensaver'
 Plugin 'mileszs/ack.vim'
-Plugin 'jiangmiao/auto-pairs'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
