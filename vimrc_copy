@@ -399,15 +399,15 @@ Plugin 'Shougo/neocomplete'
 Plugin 'luochen1990/rainbow'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'tomasr/molokai'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'uguu-org/vim-matrix-screensaver'
-Plugin 'mileszs/ack.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'dyng/ctrlsf.vim'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
@@ -512,8 +512,10 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "let g:UltiSnipsEditSplit="vertical"
 
-"Ack
-:map <Leader>s :Ack!<CR>
+"Ag
+:map <Leader>s :CtrlSF<CR>
+:map <Leader>r :CtrlSFOpen<CR>
+let g:ctrlsf_position = 'right'
 
 "Rainbow
 let g:rainbow_active = 1
