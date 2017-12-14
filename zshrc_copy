@@ -104,6 +104,12 @@ else
     alias vi='vim'
 fi
 
+cd () {
+    if builtin cd ${1:+"$@"} && [ -r ~/.before_cd.sh ]; then
+        . ~/.before_cd.sh
+    fi
+}
+
 alias -s go=vi
 alias src='saverc'
 alias e='exit'
