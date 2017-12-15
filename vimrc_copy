@@ -405,7 +405,7 @@ Plugin 'uguu-org/vim-matrix-screensaver'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'dyng/ctrlsf.vim'
 
@@ -606,3 +606,13 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 let python_highlight_all=1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_go_checkers = ['go']

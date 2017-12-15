@@ -59,9 +59,10 @@ export PATH=/usr/local/bin:$HOME/bin:$PATH
 export LC_CTYPE=zh_CN.UTF-8
 
  #GOLANG environment
+export DEFAULTGOPATH=/usr/local/src/gotools
 export GOROOT=/usr/local/src/go
 export GOBIN=$GOROOT/bin
-export GOPATH=/usr/local/src/gotools
+export GOPATH=$DEFAULTGOPATH
 export PATH=$PATH:$GOROOT/bin:$GOBIN
 
 source $ZSH/oh-my-zsh.sh
