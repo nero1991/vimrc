@@ -400,7 +400,6 @@ Plugin 'luochen1990/rainbow'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'uguu-org/vim-matrix-screensaver'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'vim-scripts/indentpython.vim'
@@ -495,10 +494,6 @@ let g:go_highlight_build_constraints = 1
 
 let g:go_fmt_command = "goimports"
 let g:go_def_mode = 'godef'
-
-
-"lock
-:map <Leader>ll :Matrix<CR>
 
 "airline
 let g:airline#extensions#tabline#enabled = 1
