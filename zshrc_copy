@@ -101,8 +101,6 @@ fi
 #for mac vim
 if [ `which mvim` != "" ]; then
     alias vim='mvim'
-else
-    alias vi='vim'
 fi
 
 cd () {
