@@ -13,18 +13,27 @@ Plug 'luochen1990/rainbow'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-lua-ftplugin'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'kien/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'joshdick/onedark.vim'
 "Plug 'Sirver/ultisnips'
 "Plug 'honza/vim-snippets'
+Plug 'JuliaEditorSupport/julia-vim'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Initialize plugin system
 call plug#end()
@@ -319,16 +328,16 @@ map <leader>s? z=
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+"noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+"map <leader>q :e ~/buffer<cr>
 
 " Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
+"map <leader>x :e ~/buffer.md<cr>
 
 " Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
+"map <leader>pp :setlocal paste!<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -389,18 +398,23 @@ let mapleader = ","
 :imap <c-j> <down>
 :imap <c-k> <up>
 :set completeopt=menu
-:set nocompatible              " 去除VI一致性,必须
-":filetype off                  " 必须
+:set nocompatible
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => deoplete
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-" deoplete-go settings
-" Use deoplete.
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+"let g:deoplete#sources#go#source_importer = 1
+"let g:deoplete#sources#go#sort_class = ['var', 'const','package', 'func', 'type', ]
+"let g:deoplete#sources#go#auto_goos = 1
+"let g:deoplete#sources#go#builtin_objects = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ycm
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+"let g:ycm_cache_omnifunc = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tagbar
@@ -452,7 +466,8 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 let g:go_fmt_command = "goimports"
-let g:go_def_mode = 'godef'
+let g:go_gocode_propose_source = 1
+let g:go_gocode_unimported_packages = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => airline
@@ -474,9 +489,9 @@ nnoremap <C-s-tab> :bp<CR>
 " => UltiSnips
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "UltiSnips
-let g:UltiSnipsExpandTrigger="<c-space>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsExpandTrigger="<c-space>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "let g:UltiSnipsEditSplit="vertical"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -486,9 +501,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 :map <Leader>r :CtrlSFOpen<CR>
 
 let g:ctrlsf_ackprg = 'ag' 
-let g:ctrlsf_position = 'right'
+let g:ctrlsf_position = 'bottom'
 
-let g:ctrlsf_default_root = 'project+fw'
+"let g:ctrlsf_default_root = 'project+fw'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => rainbow

@@ -108,11 +108,3 @@ cd () {
         . ~/.before_cd.sh
     fi
 }
-
-alias -s go=vi
-alias src='saverc'
-alias e='exit'
-alias o='logout'
-alias xr='crystal xbuild -ir'
-alias xd='crystal xbuild -bd'
-alias subl="open -a Sublime\ Text"
