@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /usr/local/src/vimrc
 git pull
 mv ~/.vimrc ~/.vimrc_bk
 cp vimrc_copy ~/.vimrc
