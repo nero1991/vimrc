@@ -13,7 +13,7 @@ Plug 'luochen1990/rainbow'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/indentpython.vim'
+"Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'kien/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
@@ -23,7 +23,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
 "Plug 'Sirver/ultisnips'
 "Plug 'honza/vim-snippets'
-Plug 'JuliaEditorSupport/julia-vim'
+"Plug 'JuliaEditorSupport/julia-vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
