@@ -108,3 +108,5 @@ cd () {
         . ~/.before_cd.sh
     fi
 }
+
+export PATH=$PATH:$HOME/.gitall
