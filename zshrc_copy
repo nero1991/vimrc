@@ -99,9 +99,9 @@ if [ -f ".alias" ]; then
 fi
 
 #for mac vim
-if [ `which mvim` != "" ]; then
-    alias vim='mvim'
-fi
+#if [ `which mvim` != "" ]; then
+#    alias vim='mvim'
+#fi
 
 cd () {
     if builtin cd ${1:+"$@"} && [ -r ~/.before_cd.sh ]; then
