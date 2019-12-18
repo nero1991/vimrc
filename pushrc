@@ -1,5 +1,6 @@
  #!/bin/bash
  cp ~/.vimrc ./vimrc_copy
  cp ~/.zshrc ./zshrc_copy
+ cp ~/.tmux.conf ./tmux.conf
  git commit . -m "save"
  git push

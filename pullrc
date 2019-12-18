@@ -4,3 +4,5 @@ mv ~/.vimrc ~/.vimrc_bk
 cp vimrc_copy ~/.vimrc
 mv ~/.zshrc ~/.zshrc_bk
 cp zshrc_copy ~/.zshrc
+mv ~/.tmux.conf ~/.tmux.conf_bk
+cp tmux.conf .tmux.conf
