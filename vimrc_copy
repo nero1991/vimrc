@@ -528,4 +528,4 @@ let g:header_field_timestamp_format = '%Y-%m-%d'
 let g:header_go_comment_char = '//'
 let g:header_field_author = 'nerored'
 let g:header_field_author_email = 'nero_stellar@icloud.com'
-:map <Leader>h :AddHeader<CR>
+:map <Leader>h :AddMITLicens<CR>
