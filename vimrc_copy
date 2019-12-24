@@ -237,7 +237,7 @@ map <leader>d :Bclose<cr>:tabclose<cr>gT
 map <leader>a :bufdo bd<cr>
 
 map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+map <leader>k :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -317,7 +317,7 @@ endif
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+"map <leader>ss :setlocal spell!<cr>
 
 " Shortcuts using <leader>
 map <leader>sn ]s
@@ -381,7 +381,12 @@ endfunction
 :set guioptions=m
 :set guifont=Source_Code_Pro:h12
 :set number
-:set mouse=a
+":set mouse=a
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 :syntax on
 :set bs=2
 :colorscheme onedark
@@ -500,6 +505,7 @@ nnoremap <C-s-tab> :bp<CR>
 " => Ag
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :map <Leader>s :CtrlSF<CR>
+:map <Leader>ss :CtrlSFClose<CR>
 :map <Leader>r :CtrlSFOpen<CR>
 
 let g:ctrlsf_ackprg = 'ag' 
