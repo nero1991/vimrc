@@ -98,15 +98,4 @@ if [ -f ".alias" ]; then
     source .alias
 fi
 
-#for mac vim
-#if [ `which mvim` != "" ]; then
-#    alias vim='mvim'
-#fi
-
-cd () {
-    if builtin cd ${1:+"$@"} && [ -r ~/.before_cd.sh ]; then
-        . ~/.before_cd.sh
-    fi
-}
-
 export PATH=$PATH:$HOME/.gitall
