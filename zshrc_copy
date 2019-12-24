@@ -58,10 +58,8 @@ export PATH=/usr/local/bin:$HOME/bin:$PATH
 
 
  #GOLANG environment
-export DEFAULTGOPATH=/usr/local/src/gotools
 export GOROOT=/usr/local/src/go
 export GOBIN=$GOROOT/bin
-export GOPATH=$DEFAULTGOPATH
 export PATH=$PATH:$GOROOT/bin:$GOBIN
 
 source $ZSH/oh-my-zsh.sh
