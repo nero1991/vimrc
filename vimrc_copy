@@ -13,17 +13,13 @@ Plug 'luochen1990/rainbow'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-"Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'kien/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'joshdick/onedark.vim'
-"Plug 'Sirver/ultisnips'
-"Plug 'honza/vim-snippets'
-"Plug 'JuliaEditorSupport/julia-vim'
+Plug 'nerored/vim-header'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -522,3 +518,14 @@ let g:rainbow_active = 1
 " => supertab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-header
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:header_auto_add_header = 0
+let g:header_field_timestamp_format = '%Y-%m-%d'
+let g:header_go_comment_char = '//'
+let g:header_field_author = 'nerored'
+let g:header_field_author_email = 'nero_stellar@icloud.com'
+:map <Leader>h :AddHeader<CR>
