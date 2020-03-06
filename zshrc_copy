@@ -49,7 +49,7 @@ ZSH_THEME="mortalscumbag"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ant mvn git-flow wd z zsh-autosuggestions)
+plugins=(git ant mvn git-flow wd z)
 
 # User configuration
 
@@ -58,7 +58,7 @@ export PATH=/usr/local/bin:$HOME/bin:$PATH
 
 
  #GOLANG environment
-export GOROOT=/usr/local/src/go
+export GOROOT=$HOME/Documents/tools/code/go
 export GOBIN=$GOROOT/bin
 export PATH=$PATH:$GOROOT/bin:$GOBIN
 
