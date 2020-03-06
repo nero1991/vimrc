@@ -96,4 +96,6 @@ if [ -f ".alias" ]; then
     source .alias
 fi
 
-export PATH=$PATH:$HOME/.gitall
+if [ -n `which nvim` ];then
+    alias vi='nvim'
+fi
