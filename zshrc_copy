@@ -99,6 +99,3 @@ fi
 if [ -n `which nvim` ];then
     alias vi='nvim'
 fi
-
-export  http_proxy=127.0.0.1:53489
-export https_proxy=127.0.0.1:53489
