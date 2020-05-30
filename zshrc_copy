@@ -53,7 +53,6 @@ plugins=(git ant mvn git-flow wd z)
 
 # User configuration
 
-export PATH=/usr/local/bin:$HOME/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 
