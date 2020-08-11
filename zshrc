@@ -49,7 +49,7 @@ ZSH_THEME="mortalscumbag"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ant mvn git-flow wd z)
+plugins=(git ant mvn git-flow wd z docker docker-compose)
 
 # User configuration
 
