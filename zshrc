@@ -59,7 +59,7 @@ plugins=(git ant mvn git-flow wd z docker docker-compose)
  #GOLANG environment
 export GOROOT=$HOME/Documents/tools/code/go
 export GOBIN=$GOROOT/bin
-export PATH=$PATH:$GOROOT/bin:$GOBIN
+export PATH=$PATH:$GOBIN
 
 source $ZSH/oh-my-zsh.sh
 
