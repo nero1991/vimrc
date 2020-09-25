@@ -55,9 +55,9 @@ plugins=(git ant mvn git-flow wd z docker docker-compose golang)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-
- #GOLANG environment
-export GOROOT=$HOME/Documents/tools/code/go
+#GOLANG environment
+export GOROOT=/usr/local/src/go
+export GOPATH=/usr/local/src/gopkg
 export GOBIN=$GOROOT/bin
 export PATH=$PATH:$GOBIN
 
@@ -102,3 +102,6 @@ fi
 #tmux
 alias startwork="tmux new-session -s work"
 alias back2work="tmux attach-session -t work"
+
+#nvim
+alias nswitch='nswitch() {~/.thinkvim.d/switch.sh $1};nswitch'
